@@ -1,0 +1,14 @@
+<nav>
+  <div class="nav-wrapper">
+    <a routerLink="" class="brand-logo right">Loja de Cervejas</a>
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li routerLinkActive="active"><a routerLink="/login">Login</a></li>
+      <!-- <li routerLinkActive="active"><a [routerLink]="['/detalhe',idCerveja.value]">Detalhe</a></li> -->
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <!-- <p>Entre com o id da Cerveja</p> -->
+  <!-- <input #idCerveja/> -->
+  <router-outlet></router-outlet>
+</div>

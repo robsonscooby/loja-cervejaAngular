@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="input-field col s8">
+    <input id="busca" type="text" [(ngModel)]="busca">
+    <label class="active" for="busca">Pesquisar</label>
+  </div>
+  <div class="input-field col s4">
+    <button class="btn waves-effect waves-light" name="action" (click)="novo()">Novo
+    </button>
+  </div>
+</div>
+<div class="col s12 m7" *ngFor="let item of cervejas | cervejaFiltro : busca" [routerLink]="['/detalhe', item.id]">
+  <h2 class="header">{{item.nome}}</h2>
+  <div class="card horizontal">
+    <div class="card-image">
+      <img [src]="item.url">
+    </div>
+    <div class="card-stacked">
+      <div class="card-content">
+        <p>Código: {{item.codigo}}</p>
+        <p>Marca: {{item.marca}}</p>
+        <p>Tipo: {{item.tipo}}</p>
+      </div>
+    </div>
+  </div>
+</div>
